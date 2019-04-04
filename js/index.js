@@ -70,7 +70,7 @@ startGame()
 const revertStyle = () => {
     colorBlocks.forEach(block => {
         block.classList.remove('colors__color--correct', 'colors__color--other-answer', 'colors__color--wrong')
-        block.innerHTML = null
+        block.innerHTML = ''
     })
     checkAnswer.classList.remove('panel__check--win', 'panel__check--lost')
 }
