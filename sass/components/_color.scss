@@ -1,0 +1,94 @@
+.colors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-auto-rows: 17.5rem;
+    grid-gap: 2rem;
+    align-items: center;
+    justify-items: center;
+    
+    @media only screen and (max-width: 21.875em) {
+        grid-template-columns: repeat(2, minmax(17.5rem, 1fr));        
+        grid-auto-rows: 15rem;
+        grid-gap: 1.5rem;
+    }
+
+    &__color {
+        width: 90%;
+        height: 90%;
+        border: 3px solid $color-grey-light-1;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
+        cursor: pointer;
+        transition: all .2s;
+        animation-name: moveIn;
+        animation-duration: .8s;
+        animation-fill-mode: forwards;
+        display: flex;
+        align-items: center;
+
+        &--one { transform: translateY(-10rem); }
+        &--two { transform: translateY(-10rem); }
+        &--three { transform: translateY(-10rem); }
+        &--four { transform: translateY(10rem); }
+        &--five { transform: translateY(10rem); }
+        &--six { transform: translateY(10rem); }
+        
+        @media only screen and (max-width: 38.375em) {
+            &--one { transform: translateY(0); }
+            &--two { transform: translateY(0); }
+            &--three { transform: translateY(0); }
+            &--four { transform: translateY(0); }
+            &--five { transform: translateY(0); }
+            &--six { transform: translateY(0); }
+        }
+
+        &--wrong {
+            pointer-events: none;
+            opacity: .5;
+            width: 80%;
+            height: 80%;            
+        }
+
+        &--correct {
+            pointer-events: none;
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        &--other-answer {
+            pointer-events: none;
+            opacity: 1;
+            width: 85%;
+            height: 85%;
+        }
+
+        &:hover {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__value {
+        background-color: rgba(0, 0, 0, .8);
+        width: 100%;
+        padding: 1rem 0;
+        text-align: center;
+        font-size: 1.8rem;
+        letter-spacing: 3px;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+
+        @media only screen and (max-width: 26.25em) {
+            font-size: 1.6rem;
+        }
+
+        &--correct { 
+            font-size: 2.5rem; 
+
+            @media only screen and (max-width: 26.25em) {
+                font-size: 2.25rem;
+            }        
+        }
+    }
+}
