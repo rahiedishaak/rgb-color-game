@@ -172,7 +172,8 @@ body {
   @media only screen and (max-width: 38.375em) {
     .panel {
       flex-direction: column;
-      align-items: flex-start; }
+      align-items: flex-start;
+      font-size: 2rem; }
       .panel > * {
         margin-bottom: 2rem; } }
   .panel__reset {
@@ -191,7 +192,7 @@ body {
     transition: all .2s; }
     @media only screen and (max-width: 38.375em) {
       .panel__reset {
-        font-size: 1.6rem; } }
+        font-size: 1.8rem; } }
     .panel__reset:hover {
       border: 2px solid #ddd;
       background-color: #222;
